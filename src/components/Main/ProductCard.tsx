@@ -11,6 +11,7 @@ import {
 import { useState } from "react";
 import { addItem } from "../../app/cartSlice";
 import { useAppDispatch, useAppSelector } from "../../app/hook";
+import fallbackImg from "../../assets/fallback.png";
 import type { IProducts } from "../../pages/Main";
 import ProductModal from "./ProductModal";
 
@@ -57,6 +58,7 @@ const ProductCard = (product: IProducts) => {
             src={product.mainImage}
             alt="Product image"
             borderRadius="md"
+            fallbackSrc={fallbackImg}
           />
           <Stack mt="2" padding="1">
             <Flex flexDirection="column">
